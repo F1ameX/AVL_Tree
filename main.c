@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define BUFFER_SIZE 256
 
 char *getStr()
 {
@@ -80,7 +81,7 @@ TREE* load_data()
 
 void update_data(int node_index, char* new_question, char* left, char* right)
 {
-    char buffer[256];
+    char buffer[BUFFER_SIZE];
     FILE* data = fopen("../data.txt", "r+");
     FILE* temp = fopen("../temp.txt", "w");
 
@@ -145,6 +146,7 @@ void game(TREE* tree)
 
     else
     {
+        char is_this[BUFFER_SIZE] = "Is this ";
         char *new_leaf, *new_question, *new_answer;
 
         getchar();
@@ -157,7 +159,7 @@ void game(TREE* tree)
         puts("What is the answer to your question for this plane. Yes or no?");
         new_answer = getStr();
 
-        char is_this[256] = "Is this ";
+
         char* final_question = strcat(is_this, new_leaf);
         final_question = strcat(final_question, "?");
 
@@ -166,6 +168,9 @@ void game(TREE* tree)
         else
             update_data(tree->index, new_question, final_question, tree->question);
 
+        free(new_leaf);
+        free(new_question);
+        free(new_answer);
         return;
     }
 }
