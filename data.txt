@@ -1,0 +1,15 @@
+1 This plane is from Airbus?
+2 Does this plane have 4 engines?
+3 Does this plane have 2 engines?
+4 This plane is the most popular boeing?
+5 This plane is a double-decker plane?
+6 This plane is the biggest passenger plane?
+7 This plane is often compared to the Boeing 737?
+8 Is this Boeing 777?
+9 Is this Boeing 737?
+10 Is this Boeing 757?
+11 Is this Boeing 747?
+12 Is this Airbus A340?
+13 Is this Airbus A380?
+14 Is this Airbus A350?
+15 Is this Airbus A320?
